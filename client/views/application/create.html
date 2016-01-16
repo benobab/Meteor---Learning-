@@ -1,0 +1,29 @@
+<template name="create" xmlns="http://www.w3.org/1999/html">
+    <h2 class="text-center">Publication d'un nouveau poste ?!</h2>
+    <form>
+        <div class="form-group">
+            <label for="auteurInput">Auteur</label><input placeholder="Nom et Prénom" class="form-control" id="auteurInput" type="text" name="auteur" /><br />
+        </div>
+
+        <div class="form-group">
+            <label for="titreInput">Titre</label><input placeholder="Titre du poste" class="form-control" id="titreInput" type="text" name="titre" /><br />
+        </div>
+        <div class="form-group">
+            <label for="contenuInput">Contenu</label><textarea rows="3" placeholder="Description" class="form-control" id="contenuInput" type="text" name="contenu"></textarea><br />
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
+    <br/><br/><br/>
+    <h2 class="text-center">Liste des postes</h2>
+    <div class="container-fluid">
+        <ul>
+            {{#each posts}}
+                <li>
+                    {{title}} par {{author}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+
+</template>

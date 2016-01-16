@@ -1,0 +1,22 @@
+<template name="mainLayout">
+    <h1 class="text-center">Mon site</h1>
+    <div class="container-fluid">
+        <div>
+            <ul class="list-inline text-center">
+                <li>
+                    <!-- ICI on définit un lien par rapport au nom de notre route (donc pas en dur) -->
+                    <a href="{{pathFor route='accueil'}}">Accueil</a>
+                </li>
+                <li>
+                    <a href="{{ pathFor route='posts'}}">Postes</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            {{> yield}}
+        </div>
+        <!-- To test globals helpers without parameters and with parameters -->
+        <div class="text-center">Powered by {{{getCompanyName}}} in {{{addTwo 2000 16}}}</div>
+    </div>
+
+</template>

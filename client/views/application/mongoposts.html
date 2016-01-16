@@ -1,0 +1,11 @@
+<!-- data from database-->
+<template name="postsMongo">
+    <h2>Ici c'est la liste des postes retrouvés en BDD (mongo db)</h2>
+    <ul>
+        {{#each posts}}
+            <li>
+                {{title}} par {{author}}
+            </li>
+        {{/each}}
+    </ul>
+</template>

@@ -1,0 +1,15 @@
+<template name="posts">
+<h1>Liste des différents postes</h1>
+    <ul>
+        <!-- Foreach sur la liste des posts qui est passée en data-->
+        {{#each posts}}
+            <li>
+                <!-- Inclusion de template !! -->
+                {{> post}}
+            </li>
+        {{/each}}
+    </ul>
+    <!-- triple accolades pour interpreter le html du helper -->
+    <div>Auteur : {{{getAuthor}}}</div>
+</template>
+

@@ -1,0 +1,12 @@
+<template name="post">
+    {{#if id}}
+        <h2>Ici c'est le post n° {{id}}</h2>
+    {{/if}}
+
+    {{title}} et le poste
+    {{#if hide}}
+        est
+    {{else}}
+        n'est pas
+    {{/if}} caché
+</template>
