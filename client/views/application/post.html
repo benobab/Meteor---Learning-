@@ -1,12 +1,30 @@
 <template name="post">
-    {{#if id}}
-        <h2>Ici c'est le post n° {{id}}</h2>
-    {{/if}}
+    <div class="row text-center">
+        <div class="col-md-12 well">
 
-    {{title}} et le poste
-    {{#if hide}}
-        est
-    {{else}}
-        n'est pas
-    {{/if}} caché
+            {{#if id}}
+                <h2>Ici c'est le post n° {{id}}</h2>
+            {{/if}}
+
+            {{title}} et le poste
+            {{#if hide}}
+                est
+            {{else}}
+                n'est pas
+            {{/if}} caché
+
+            <br/>
+            <em>En voici le contenu :</em> <br/>
+            {{content}}
+
+            <br/>
+            <strong>
+                {{author}}
+            </strong>
+
+
+        </div>
+    </div>
+
+
 </template>

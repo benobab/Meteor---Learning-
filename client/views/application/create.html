@@ -1,6 +1,6 @@
-<template name="create" xmlns="http://www.w3.org/1999/html">
+<template name="create">
     <h2 class="text-center">Publication d'un nouveau poste ?!</h2>
-    <form>
+    <form class="new-post">
         <div class="form-group">
             <label for="auteurInput">Auteur</label><input placeholder="Nom et Prénom" class="form-control" id="auteurInput" type="text" name="auteur" /><br />
         </div>
@@ -16,13 +16,9 @@
     <br/><br/><br/>
     <h2 class="text-center">Liste des postes</h2>
     <div class="container-fluid">
-        <ul>
-            {{#each posts}}
-                <li>
-                    {{title}} par {{author}}
-                </li>
-            {{/each}}
-        </ul>
+        {{#each posts}}
+            {{> post}}
+        {{/each}}
     </div>
 
 

@@ -1,1 +1,6 @@
 /* CSS declarations go here */
+
+body {
+    /*Size of the fixed navigation Bar*/
+    padding-top: 65px;
+}

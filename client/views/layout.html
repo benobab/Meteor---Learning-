@@ -1,17 +1,34 @@
 <template name="mainLayout">
-    <h1 class="text-center">Mon site</h1>
-    <div class="container-fluid">
-        <div>
-            <ul class="list-inline text-center">
-                <li>
-                    <!-- ICI on définit un lien par rapport au nom de notre route (donc pas en dur) -->
-                    <a href="{{pathFor route='accueil'}}">Accueil</a>
-                </li>
-                <li>
-                    <a href="{{ pathFor route='posts'}}">Postes</a>
-                </li>
-            </ul>
+    <!-- Menu responsive mobile -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><strong>{PROT-UP}</strong> - Meteor Learning</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <!-- ICI on définit un lien par rapport au nom de notre route (donc pas en dur) -->
+                        <a href="{{pathFor route='accueil'}}">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="{{ pathFor route='posts'}}">Postes</a>
+                    </li>
+                    <li>
+                        <a href="{{ pathFor route='create'}}">Création / Lists des postes</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </div>
+
+    <div class="container">
         <div>
             {{> yield}}
         </div>
