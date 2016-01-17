@@ -25,5 +25,6 @@ Template.create.events({
                 $("form input, form textarea").val("");
             }
         });
+
     }
 });

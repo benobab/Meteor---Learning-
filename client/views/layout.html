@@ -29,11 +29,14 @@
     </div>
 
     <div class="container">
+        <div class="top-left">
+            {{> loginButtons}}
+        </div>
         <div>
             {{> yield}}
         </div>
         <!-- To test globals helpers without parameters and with parameters -->
-        <div class="text-center">Powered by {{{getCompanyName}}} in {{{addTwo 2000 16}}}</div>
+        <div class="text-center">©️ Copyright {{{getCompanyName}}} in {{{addTwo 2000 16}}}</div>
     </div>
 
 </template>
